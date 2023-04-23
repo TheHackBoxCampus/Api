@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="public/assets/styles.css">
-    <script src="src/main.js" defer></script>
+    <script src="src/main.js" defer type="module"></script>
     <title>Document</title>
 </head>
 <body>
@@ -13,19 +13,21 @@
         <div class="container-movies">
             <div class="container-head">
                 <h1>Movie<span>Screen</span></h1>
-                <input type="text" placeholder="search">
+                <div class="input_movies">
+                    <input type="text" placeholder="search">
+                    <div class="movies" name=""></div>
+                </div>
                 <button>Search</button>
             </div>
             <div class="container-main">
-                  <img src="https://www.themoviedb.org/t/p/w300_and_h450_bestv2/55PJNDJbD4Q9jFO4vaCnNl9dYEv.jpg" alt="movie" id="movie_img">
+                  <img name="hola" src="https://www.themoviedb.org/t/p/w300_and_h450_bestv2/55PJNDJbD4Q9jFO4vaCnNl9dYEv.jpg" alt="movie" id="movie_img">
                   <div class="stats">
                         <div class="des">
                             <span>Description</span>
-                            <p>
-                            While working underground to fix a water main, Brooklyn plumbers—and brothers—Mario and Luigi are transported down a mysterious pipe and wander into a magical new world. But when the brothers are separated, Mario embarks on an epic quest to find Luigi.
-                            </p>
-                            <span>Ranking</span>
-                            ⭐⭐⭐⭐⭐
+                            <p id="text">After the death of King Edward, Uhtred of Bebbanburg and his comrades venture through a fractured kingdom in the hope of finally uniting England.</p>
+                            <span>Popularity: <p id="text">1213.362</p></span>
+                            <span>Tagline: <p id="text"></p></span>
+                            <span>Release Date: <p id="text">2023-04-14</p></span>
                         </div>
                   </div>          
             </div>

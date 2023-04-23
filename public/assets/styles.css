@@ -4,8 +4,14 @@
 }
 
 body {
-    background: #f64445;
-    background: linear-gradient(169deg, #0f9549bf 0%, #082de4 100%)  
+    background: #222222
+}
+
+span {
+    color: #9BA4B5 
+}
+span p {
+    color: #Fff
 }
 
 .container {
@@ -18,18 +24,21 @@ body {
 }
 
 .container-movies {
-    width: 35%;
-    background: #111111;
+    width: 55%;
+    max-height: 80%;
+    background: #212A3E;
     padding: 2em;
     display: flex;
     flex-direction: column;
     gap: 2em;
+    border: 3.5px dashed #181717;
 }
 
 .container-movies div:nth-child(1){
     display: flex;
     justify-content: space-between;
     gap:1em;
+    max-height: calc(19em - 2em);
 }
 .container-movies div:nth-child(1) h1{
     color: #fff;
@@ -37,10 +46,57 @@ body {
 }
 
 .container-movies div:nth-child(1) h1>span{
-    color: #08b4e483
+    color: #4e6289
 }
 
-.container-movies div:nth-child(1) input,
+.container-movies div:nth-child(1) div{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 40%;
+}
+
+.container-movies div:nth-child(1) div .movies{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    background: #222222;
+    margin-left: 0.5em;
+    overflow-y: scroll;
+    max-height: 5em;
+    position: absolute;
+    top: 100%;
+}
+.container-movies div:nth-child(1) div .movies div{
+    width: 100%;
+    height: 100%;
+    transition: all ease 300ms;
+    cursor: pointer;
+}
+.container-movies div:nth-child(1) div .movies div:hover{
+    background: #333333;
+}
+.container-movies div:nth-child(1) div div{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items:center;
+    gap: 0.3em;
+}
+
+.container-movies div:nth-child(1) div div p{
+    font-family: Arial, Helvetica, sans-serif;
+    color: #fff;
+    font-weight: bold;
+    margin-left: 1em;
+}
+
+.container-movies div:nth-child(1) div div img{
+    width: 20%;
+}
+
+.container-movies div:nth-child(1) div input,
 .container-movies div:nth-child(1) button{
     padding: 1em;
     background: #222;
@@ -51,9 +107,9 @@ body {
     cursor: pointer;
 }
 
-.container-movies div:nth-child(1) input{
+.container-movies div:nth-child(1) div input{
     border-radius: 2em;
-    width: 30%;
+    width: 100%;
 }
 
 .container-movies div:nth-child(1) button:hover{
@@ -67,7 +123,8 @@ body {
 
 .container-movies div:nth-child(2) img{
     border-radius: 0.4em;
-    width: 43%;
+    width: 40%;
+    max-height: 450px;
 }
 
 .container-movies div:nth-child(2) .stats div{
@@ -77,10 +134,6 @@ body {
     padding: 1em;
     font-size: 1.4rem;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    color: #dfdfdf
+    color: #dfdfdf;
+    overflow-y: scroll;
 }
-
-.container-movies div:nth-child(2) .stats div span{
-    color: #08b4e483
-}
-
